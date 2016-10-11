@@ -5,6 +5,6 @@
 <li>src/MongoDB/ contains code for building a JSON document store from the large text file crime-data.txt
 <li>src/Neo4j/ contains code for building a graph model from the same large text file.
 </ul>
-This was a group project for a class on modern databases. After building the databases and queries, we compared query execution times and documented
-the qualitative experience. MongoDB is easiest to setup because it does not enforce a schema, auto-indexes on keys, and has superb user support. 
-Neo4j demands thoughtful schema design choices for comparable perfromance. Neo4j has greater potential for discovering  relationships amongst the data nodes using the Cypher query language.
+This was a quick-and-dirty group project for a class on NoSQL databases. We used a document store (MongoDB) and a graph (Neo4j) to model ~10^6 crime records from the city of Chicago.
+
+My contribution was designing the schema and building the MongoDB database. I also refactored a group member's Neo4j code to create indexes and eliminate directed edges for greatly improve query performance (from minutes to seconds).
